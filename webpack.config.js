@@ -1,3 +1,13 @@
+/**
+ * @Author: 王宇 <moke>
+ * @Date:   2017-11-13T21:15:34+08:00
+ * @Email:  edwardwang0302@me.com
+ * @Last modified by:   moke
+ * @Last modified time: 2017-11-14T22:40:33+08:00
+ */
+
+
+
 var webpack = require('webpack')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -35,6 +45,14 @@ var config = {
             { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader','css-loader') },
             { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]'}
         ]
+    },
+    resolve : {
+        alias : {
+            util : __dirname + '/src/util',
+            page : __dirname + '/src/page',
+            service : __dirname + '/src/service',
+            image : __dirname + '/src/image',
+        }
     },
     plugins: [
         // 独立通用模块到js/base.js

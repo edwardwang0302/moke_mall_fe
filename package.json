@@ -31,6 +31,7 @@
     "webpack-dev-server": "^1.16.5"
   },
   "dependencies": {
+    "hogan": "^1.0.2",
     "url-loader": "^0.5.8"
   }
 }
