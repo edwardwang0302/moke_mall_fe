@@ -3,7 +3,7 @@
  * @Date:   2017-11-13T21:15:34+08:00
  * @Email:  edwardwang0302@me.com
  * @Last modified by:   moke
- * @Last modified time: 2017-11-14T22:40:33+08:00
+ * @Last modified time: 2017-11-15T21:53:58+08:00
  */
 
 
@@ -48,6 +48,7 @@ var config = {
     },
     resolve : {
         alias : {
+            node_modules : __dirname + '/node_modules',
             util : __dirname + '/src/util',
             page : __dirname + '/src/page',
             service : __dirname + '/src/service',
