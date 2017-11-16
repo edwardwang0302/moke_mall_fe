@@ -3,11 +3,8 @@
  * @Date:   2017-11-13T21:15:34+08:00
  * @Email:  edwardwang0302@me.com
  * @Last modified by:   moke
- * @Last modified time: 2017-11-15T21:53:58+08:00
+ * @Last modified time: 2017-11-16T22:39:03+08:00
  */
-
-
-
 var webpack = require('webpack')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -16,10 +13,11 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev'
 
 // 获取html-webpack-plugin参数的方法
-var getHtmlConfig = function(name) {
+var getHtmlConfig = function(name, title) {
     return {
         template: './src/view/' + name + '.html',
         filename: 'view/' + name + '.html',
+        title: title,
         inject: true,
         hash: true,
         chunks: ['common', name]
@@ -30,7 +28,8 @@ var config = {
     entry: {
         'common':['./src/page/common/index.js'],
         'index':['./src/page/index/index.js'],
-        'login':['./src/page/login/index.js']
+        'login':['./src/page/login/index.js'],
+        'result':['./src/page/result/index.js']
     },
     output: {
         path: './dist',
@@ -43,7 +42,8 @@ var config = {
     module: {
         loaders: [
             { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader','css-loader') },
-            { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]'}
+            { test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=100&name=resource/[name].[ext]'},
+            { test: /\.string$/, loader: 'html-loader'}
         ]
     },
     resolve : {
@@ -64,8 +64,9 @@ var config = {
         // 把css单独打包到文件中
         new ExtractTextPlugin('css/[name].css'),
         // html模板的处理
-        new HtmlWebpackPlugin(getHtmlConfig('index')),
-        new HtmlWebpackPlugin(getHtmlConfig('login'))
+        new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
+        new HtmlWebpackPlugin(getHtmlConfig('login', '用户登录')),
+        new HtmlWebpackPlugin(getHtmlConfig('result', '结果'))
     ]
 }
 

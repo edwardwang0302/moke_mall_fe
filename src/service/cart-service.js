@@ -3,17 +3,17 @@
  * @Date:   2017-11-15T22:38:40+08:00
  * @Email:  edwardwang0302@me.com
  * @Last modified by:   moke
- * @Last modified time: 2017-11-15T22:40:36+08:00
+ * @Last modified time: 2017-11-16T21:56:37+08:00
  */
 'use strict';
 
-var __mm = require('util/mm.js');
+var _mm = require('util/mm.js');
 
 var _cart = {
     // 获取购物车数量
     getCartCount: function(resolve, reject) {
         _mm.request({
-            url: __mm.getServerUrl('/cart/get_cart_product_count.do'),
+            url: _mm.getServerUrl('/cart/get_cart_product_count.do'),
             success: resolve,
             error: reject
         });

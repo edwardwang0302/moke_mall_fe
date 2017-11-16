@@ -1,0 +1,28 @@
+/**
+ * @Author: 王宇 <moke>
+ * @Date:   2017-11-16T21:46:49+08:00
+ * @Email:  edwardwang0302@me.com
+ * @Last modified by:   moke
+ * @Last modified time: 2017-11-16T22:30:54+08:00
+ */
+/*导航主体*/
+.nav-side {
+    float: left;
+    width: 130px;
+    min-height: 100px;
+}
+.nav-side .nav-item {
+    line-height: 25px;
+    font-size: 13px;
+}
+.nav-side .nav-item .link {
+    color: #888;
+}
+.nav-side .nav-item.active .link {
+    color: #c60023;
+}
+/*右侧内容区*/
+.content.with-nav {
+    float: left;
+    width: 950px;
+}
