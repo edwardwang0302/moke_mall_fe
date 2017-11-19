@@ -3,7 +3,7 @@
  * @Date:   2017-11-16T21:44:35+08:00
  * @Email:  edwardwang0302@me.com
  * @Last modified by:   moke
- * @Last modified time: 2017-11-16T22:30:04+08:00
+ * @Last modified time: 2017-11-19T17:55:37+08:00
  */
 'use strict';
 require('./index.css');
@@ -18,7 +18,7 @@ var navSide = {
         navList: [
             {name: 'user-center', desc: '个人中心', href: './user-center.html'},
             {name: 'order-list', desc: '我的订单', href: './order-list.html'},
-            {name: 'pass-update', desc: '修改密码', href: './pass-update.html'},
+            {name: 'user-pass-update', desc: '修改密码', href: './user-pass-update.html'},
             {name: 'about', desc: '关于MokeMall', href: './about.html'}
         ]
     },

@@ -3,7 +3,7 @@
  * @Date:   2017-11-13T21:15:34+08:00
  * @Email:  edwardwang0302@me.com
  * @Last modified by:   moke
- * @Last modified time: 2017-11-19T16:53:34+08:00
+ * @Last modified time: 2017-11-19T17:45:43+08:00
  */
 var webpack = require('webpack')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
@@ -33,6 +33,7 @@ var config = {
         'user-pass-reset':['./src/page/user-pass-reset/index.js'],
         'user-center':['./src/page/user-center/index.js'],
         'user-center-update':['./src/page/user-center-update/index.js'],
+        'user-pass-update':['./src/page/user-pass-update/index.js'],
         'result':['./src/page/result/index.js']
     },
     output: {
@@ -74,6 +75,7 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),
         new HtmlWebpackPlugin(getHtmlConfig('user-center', '个人中心')),
         new HtmlWebpackPlugin(getHtmlConfig('user-center-update', '修改个人信息')),
+        new HtmlWebpackPlugin(getHtmlConfig('user-pass-update', '修改密码')),
         new HtmlWebpackPlugin(getHtmlConfig('result', '结果'))
     ]
 }

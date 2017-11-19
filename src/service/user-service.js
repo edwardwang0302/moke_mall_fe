@@ -3,7 +3,7 @@
  * @Date:   2017-11-15T22:29:12+08:00
  * @Email:  edwardwang0302@me.com
  * @Last modified by:   moke
- * @Last modified time: 2017-11-19T17:30:56+08:00
+ * @Last modified time: 2017-11-19T18:03:46+08:00
  */
 'use strict';
 
@@ -96,6 +96,16 @@ var _user = {
     updateUserInfo: function(userinfo, resolve, reject) {
         _mm.request({
             url: _mm.getServerUrl('/user/update_information.do'),
+            data: userinfo,
+            method: 'POST',
+            success: resolve,
+            error: reject
+        });
+    },
+    // 登录状态下 更新个人密码
+    updatePassword: function(userinfo, resolve, reject) {
+        _mm.request({
+            url: _mm.getServerUrl('/user/reset_password.do'),
             data: userinfo,
             method: 'POST',
             success: resolve,
