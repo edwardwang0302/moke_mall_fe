@@ -3,7 +3,7 @@
  * @Date:   2017-11-15T22:15:09+08:00
  * @Email:  edwardwang0302@me.com
  * @Last modified by:   moke
- * @Last modified time: 2017-11-15T22:41:56+08:00
+ * @Last modified time: 2017-11-19T14:29:08+08:00
  */
 'use strict';
 require('./index.css');
@@ -27,7 +27,7 @@ var nav = {
         });
         // 注册点击事件
         $('.js-register').click(function() {
-            window.location.href = './register.html';
+            window.location.href = './user-register.html';
         });
         // 退出点击事件
         $('.js-logout').click(function() {
@@ -42,7 +42,7 @@ var nav = {
     // 加载用户信息
     loadUserInfo: function() {
         _user.checkLogin(function(res) {
-            $('.user.not-login').hide().siblings('user.login').show()
+            $('.user.not-login').hide().siblings('.user.login').show()
                 .find('.username').text(res.username);
         }, function(errMsg) {
             // do nothing

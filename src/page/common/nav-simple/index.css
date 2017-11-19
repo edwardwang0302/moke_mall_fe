@@ -3,7 +3,7 @@
  * @Date:   2017-11-15T21:58:45+08:00
  * @Email:  edwardwang0302@me.com
  * @Last modified by:   moke
- * @Last modified time: 2017-11-15T22:07:34+08:00
+ * @Last modified time: 2017-11-19T16:34:55+08:00
  */
 .nav-simple {
     height: 60px;
@@ -15,4 +15,5 @@
     font-size: 26px;
     font-weight: bold;
     color: #c60023;
+    text-decoration: none;
 }

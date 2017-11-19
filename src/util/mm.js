@@ -3,7 +3,7 @@
  * @Date:   2017-11-14T22:22:48+08:00
  * @Email:  edwardwang0302@me.com
  * @Last modified by:   moke
- * @Last modified time: 2017-11-14T23:38:12+08:00
+ * @Last modified time: 2017-11-19T11:16:20+08:00
  */
 'use strict';
 var Hogan = require('hogan.js');
@@ -79,7 +79,7 @@ var _mm = {
     },
     // 统一登录处理
     doLogin: function() {
-        window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
+        window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
     },
     // 返回主页
     goHome: function() {
