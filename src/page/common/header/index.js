@@ -3,7 +3,7 @@
  * @Date:   2017-11-15T22:51:01+08:00
  * @Email:  edwardwang0302@me.com
  * @Last modified by:   moke
- * @Last modified time: 2017-11-15T23:09:34+08:00
+ * @Last modified time: 2017-11-20T13:50:21+08:00
  */
  'use strict';
  require('./index.css');
@@ -13,9 +13,10 @@
  var header = {
      init: function() {
          this.bindEvent();
+         this.onLoad();
      },
      onLoad: function() {
-        var keyword = __mm.getUrlParam('keyword');
+        var keyword = _mm.getUrlParam('keyword');
         // keyword存在，则回填输入框
         if (keyword) {
             $('#search-input').val(keyword);
