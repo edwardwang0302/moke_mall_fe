@@ -3,7 +3,7 @@
  * @Date:   2017-11-15T22:38:40+08:00
  * @Email:  edwardwang0302@me.com
  * @Last modified by:   moke
- * @Last modified time: 2017-11-16T21:56:37+08:00
+ * @Last modified time: 2017-11-20T20:01:08+08:00
  */
 'use strict';
 
@@ -14,6 +14,15 @@ var _cart = {
     getCartCount: function(resolve, reject) {
         _mm.request({
             url: _mm.getServerUrl('/cart/get_cart_product_count.do'),
+            success: resolve,
+            error: reject
+        });
+    },
+    // 添加到购物车
+    addToCart: function(productInfo, resolve, reject) {
+        _mm.request({
+            url: _mm.getServerUrl('/cart/add.do'),
+            data: productInfo,
             success: resolve,
             error: reject
         });

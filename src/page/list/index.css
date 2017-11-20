@@ -3,7 +3,7 @@
  * @Date:   2017-11-20T13:41:46+08:00
  * @Email:  edwardwang0302@me.com
  * @Last modified by:   moke
- * @Last modified time: 2017-11-20T14:24:59+08:00
+ * @Last modified time: 2017-11-20T18:58:14+08:00
  */
 /*排序按钮*/
 .sort-con {
@@ -77,4 +77,15 @@
     margin-bottom: 10px;
     color: #666;
     text-decoration: none;
+}
+
+/*错误信息*/
+.err-tip {
+    height: 60px;
+    line-height: 60px;
+    color: #f60;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background: #eee;
 }
