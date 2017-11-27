@@ -3,7 +3,7 @@
  * @Date:   2017-11-23T21:36:04+08:00
  * @Email:  edwardwang0302@me.com
  * @Last modified by:   moke
- * @Last modified time: 2017-11-25T16:21:04+08:00
+ * @Last modified time: 2017-11-26T20:07:04+08:00
  */
  'use strict';
 
@@ -125,7 +125,7 @@
          $(document).on('click', '.btn-submit', function() {
              // 总价大于0，进行提交
              if(_this.data.cartInfo && _this.data.cartInfo.cartTotalPrice > 0) {
-                 window.location.href = './confirm.html';
+                 window.location.href = './order-confirm.html';
              } else {
                  _mm.errorTips('请选择商品后再提交')
              }
