@@ -3,7 +3,7 @@
  * @Date:   2017-11-26T20:11:36+08:00
  * @Email:  edwardwang0302@me.com
  * @Last modified by:   moke
- * @Last modified time: 2017-11-26T21:54:19+08:00
+ * @Last modified time: 2017-11-28T22:21:09+08:00
  */
  'use strict';
 
@@ -27,6 +27,15 @@
              error: reject
          });
      },
+     // 获取订单列表
+     getOrderList: function(listParam, resolve, reject) {
+         _mm.request({
+             url: _mm.getServerUrl('/order/list.do'),
+             data: listParam,
+             success: resolve,
+             error: reject
+         });
+     }
  }
 
  module.exports = _order;

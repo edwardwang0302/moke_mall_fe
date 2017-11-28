@@ -3,7 +3,7 @@
  * @Date:   2017-11-14T23:44:48+08:00
  * @Email:  edwardwang0302@me.com
  * @Last modified by:   moke
- * @Last modified time: 2017-11-19T16:40:12+08:00
+ * @Last modified time: 2017-11-28T22:06:34+08:00
  */
 * {
     margin: 0;
@@ -11,7 +11,7 @@
 }
 body {
     background: #f6f6f6;
-    font-size: 12px/1.5 tahoma, arial, Microsoft Yahei, sans-serif;
+    font: 12px/1.5 tahoma, arial, Microsoft YaHei, sans-serif;
 }
 li {
     list-style: none;
