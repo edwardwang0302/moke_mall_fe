@@ -3,7 +3,7 @@
  * @Date:   2017-11-26T20:11:36+08:00
  * @Email:  edwardwang0302@me.com
  * @Last modified by:   moke
- * @Last modified time: 2017-11-28T22:21:09+08:00
+ * @Last modified time: 2017-11-29T21:52:50+08:00
  */
  'use strict';
 
@@ -32,6 +32,28 @@
          _mm.request({
              url: _mm.getServerUrl('/order/list.do'),
              data: listParam,
+             success: resolve,
+             error: reject
+         });
+     },
+     // 获取订单详情
+     getOrderDetail: function(orderNumber, resolve, reject) {
+         _mm.request({
+             url: _mm.getServerUrl('/order/detail.do'),
+             data: {
+                 orderNo: orderNumber
+             },
+             success: resolve,
+             error: reject
+         });
+     },
+     // 取消订单
+     cancelOrder: function(orderNumber, resolve, reject) {
+         _mm.request({
+             url: _mm.getServerUrl('/order/cancel.do'),
+             data: {
+                 orderNo: orderNumber
+             },
              success: resolve,
              error: reject
          });

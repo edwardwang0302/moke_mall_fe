@@ -3,7 +3,7 @@
  * @Date:   2017-11-13T21:15:34+08:00
  * @Email:  edwardwang0302@me.com
  * @Last modified by:   moke
- * @Last modified time: 2017-11-28T21:39:13+08:00
+ * @Last modified time: 2017-11-29T20:49:27+08:00
  */
 var webpack = require('webpack')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
@@ -32,6 +32,7 @@ var config = {
         'cart':['./src/page/cart/index.js'],
         'order-confirm':['./src/page/order-confirm/index.js'],
         'order-list':['./src/page/order-list/index.js'],
+        'order-detail':['./src/page/order-detail/index.js'],
         'detail':['./src/page/detail/index.js'],
         'user-login':['./src/page/user-login/index.js'],
         'user-register':['./src/page/user-register/index.js'],
@@ -80,6 +81,7 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('cart', '购物车')),
         new HtmlWebpackPlugin(getHtmlConfig('order-confirm', '订单确认')),
         new HtmlWebpackPlugin(getHtmlConfig('order-list', '订单列表')),
+        new HtmlWebpackPlugin(getHtmlConfig('order-detail', '订单详情')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login', '用户登录')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register', '用户注册')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset', '找回密码')),
