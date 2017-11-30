@@ -3,7 +3,7 @@
  * @Date:   2017-11-15T22:51:08+08:00
  * @Email:  edwardwang0302@me.com
  * @Last modified by:   moke
- * @Last modified time: 2017-11-19T16:34:36+08:00
+ * @Last modified time: 2017-11-29T22:00:47+08:00
  */
 /* 通用头部导航 */
 .header .logo {
@@ -34,6 +34,7 @@
     position: absolute;
     height: 44px;
     width: 80px;
+    margin-left: -3px;
 }
 
 /*面包屑导航*/
