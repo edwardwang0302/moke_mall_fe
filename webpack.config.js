@@ -3,7 +3,7 @@
  * @Date:   2017-11-13T21:15:34+08:00
  * @Email:  edwardwang0302@me.com
  * @Last modified by:   moke
- * @Last modified time: 2017-11-30T22:52:27+08:00
+ * @Last modified time: 2017-12-03T16:34:54+08:00
  */
 var webpack = require('webpack')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
@@ -47,7 +47,7 @@ var config = {
     },
     output: {
         path: __dirname + '/dist/',
-        publicPath: 'dev' === WEBPACK_ENV ? '/dist/':'//s.happymmall.com/mmall-fe/dist/',
+        publicPath: 'dev' === WEBPACK_ENV ? '/dist/':'//static.mokewy.top/moke_mall_fe/dist/',
         filename: 'js/[name].js'
     },
     externals: {
