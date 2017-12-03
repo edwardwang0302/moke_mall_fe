@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "WEBPACK_ENV=dev webpack-dev-server --inline --port 8088",
     "dev_win": "set WEBPACK_ENV=dev && webpack-dev-server --inline --port 8088",
-    "disk": "WEBPACK_ENV=online webpack -p",
-    "disk_win": "WEBPACK_ENV=online webpack -p"
+    "dist": "WEBPACK_ENV=online webpack -p",
+    "dist_win": "WEBPACK_ENV=online webpack -p"
   },
   "repository": {
     "type": "git",
